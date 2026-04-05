@@ -14,5 +14,5 @@ jobs:
 
       - name: Docker Build
         run: |
-          docker build -t netflix-backend .
+          docker build -t netflix_backend .
 
