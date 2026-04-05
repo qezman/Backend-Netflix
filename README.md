@@ -131,11 +131,3 @@ java -jar target/{your_artifact_name}.jar
 * Ensure MongoDB is properly configured and accessible.
 * Double-check your environment variables before running.
 * Keep your Personal Access Token secure.
-
----
-
-## 🎓 Final Words
-
-Good luck with your learning and development journey! 🚀
-
-**— Engr. Smart Cares**
