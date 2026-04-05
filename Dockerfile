@@ -14,9 +14,10 @@ COPY ./pom.xml /app
 
 # Build the application
 RUN mvn -f /app/pom.xml clean package -DskipTests
+RUN ls -la /app/target/
 
 # Copy the jar file
-COPY ./target/*.jar /app/app.jar
+# COPY ./target/*.jar /app/app.jar
 
 # Expose the port
 EXPOSE 8080
