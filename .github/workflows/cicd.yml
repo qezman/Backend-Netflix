@@ -9,10 +9,43 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout out the repo
+      - name: Checkout out the repository
         uses: actions/checkout@v2
 
-      - name: Docker Build
+      - name: Docker Build-1
         run: |
-          docker build -t netflix_backend .
+          hostnamectl
+
+  build-and-push-2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout out the repository
+        uses: actions/checkout@v2
+
+      - name: Docker Build-2
+        run: |
+          hostnamectl
+
+
+
+
+
+# name: Build and push docker image
+
+# on:
+#   push:
+#     branches: [main]
+
+# jobs:
+#   build-and-push-1:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout out the repo
+#         uses: actions/checkout@v2
+
+#       - name: Docker Build
+#         run: |
+#           docker build -t netflix_backend .
 
