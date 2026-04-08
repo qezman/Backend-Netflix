@@ -14,7 +14,9 @@ jobs:
 
       - name: Docker Build
         run: |
-          echo "${{secrets.ENV_FILE}}" > .env
-          ls -la
-          cat .env
+          if [[ -n "${{ secrets.ENV_FILE }}" ]]; then
+            echo "Secret is present ✅"
+          else
+            echo "Secret missing ❌"
+          fi
           # docker build -t netflix_backend:latest .
