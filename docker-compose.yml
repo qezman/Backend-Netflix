@@ -1,0 +1,15 @@
+services:
+  backend:
+    image: 663291012203.dkr.ecr.us-east-1.amazonaws.com/netflix_backend:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - MONGO_DATABASE=${MONGO_DATABASE}
+      - MONGO_USER=${MONGO_USER}
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_CLUSTER=${MONGO_CLUSTER}
+
+  frontend:
+    image: 663291012203.dkr.ecr.us-east-1.amazonaws.com/netflix_frontend:latest
+    ports:
+      - "80:80"
