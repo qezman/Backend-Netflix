@@ -33,7 +33,7 @@ jobs:
           cat .application.properties
           docker build -t netflix_backend:latest .
 
-      - name: Verify Docker image locally
+      - name: Verifying Docker image locally
         run: docker images
 
       # Push Docker image to ECR
